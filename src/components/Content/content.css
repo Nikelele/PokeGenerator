@@ -1,0 +1,154 @@
+.kachel {
+  padding: 10px;
+  border: 1px solid grey;
+  border-radius: 10px;
+  min-width: 300px;
+  min-height: 220px;
+  background: inherit;
+  box-shadow: inset 0 0 100px rgba(85, 82, 82, 0.5);
+  backdrop-filter: blur(5px);
+  transition: all 0.1s ease-in-out;
+}
+
+.kachel:hover {
+  transform: scale(1.05);
+}
+
+.kachel img {
+  height: 150px;
+}
+
+.kachel > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.kachel ul {
+  list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margins */
+  list-style-position: inside;
+  align-items: center;
+  text-align: right;
+  text-transform: capitalize;
+  width: 50%;
+  animation: scaleIn 0.2s;
+}
+
+.pokemon-team {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 610px) {
+  .pokemon-team {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 920px) {
+  .pokemon-team {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.name {
+  text-transform: uppercase;
+}
+
+/* nicht für Tut! */
+.loader {
+  border: 10px solid #f3f3f3; /* Light grey */
+  border-top: 10px solid #55595e; /* Blue */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+}
+
+.loader-container {
+  justify-content: center !important;
+  height: 100%;
+  width: 100%;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rollout {
+  0% {
+    transform: translateY(-25px);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+.sprite {
+  animation: scaleIn 0.2s;
+}
+
+.tags {
+  width: 20%;
+}
+
+.tags ul {
+  animation: none;
+  width: 100%;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.btn_refresh {
+  margin-bottom: 1rem;
+  width: 300px;
+  background-color: hotpink;
+  color: hsl(330, 100%, 11%);
+  border: none;
+  animation-duration: 0.2;
+}
+
+.btn_refresh:active {
+  box-shadow: inset 0px 0px 5px #151212;
+}
+
+.btn_refresh:hover {
+  background-color: hsl(330, 100%, 91%);
+}
+.btn_refresh:focus,
+.btn_refresh:focus-within {
+  outline: none;
+  transition: ease-in-out;
+}
+
+.shiny {
+  box-shadow: inset 0 0 100px rgba(194, 196, 73, 0.401);
+}
+
+.content {
+  margin: 1rem;
+}
+
+.stat {
+  display: flex;
+  justify-content: space-between;
+}
+
+@keyframes scaleIn {
+  0% {
+    transform: scaleX(0.4);
+  }
+
+  100% {
+    transform: scaleX(1);
+  }
+}
